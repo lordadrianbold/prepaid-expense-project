@@ -1,0 +1,176 @@
+[
+  {
+    "id": "OE-004",
+    "vendor": "Costco Wholesale",
+    "invoice_date": "2026-01-20",
+    "amount": 620.0,
+    "description": "Bulk purchase of coffee and kitchen supplies for the year",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "OE-003",
+    "vendor": "Uline",
+    "invoice_date": "2026-05-15",
+    "amount": 1950.0,
+    "description": "Shipping boxes and packaging materials, 6-month supply order",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "PP-005",
+    "vendor": "SecureGuard Maintenance Services",
+    "invoice_date": "2026-04-05",
+    "amount": 14400.0,
+    "description": "HVAC maintenance contract, 12-month service agreement effective May 1, 2026 through April 30, 2027",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-05-01",
+    "true_coverage_end": "2027-04-30"
+  },
+  {
+    "id": "PP-010",
+    "vendor": "Riverside Conference Center",
+    "invoice_date": "2026-06-01",
+    "amount": 4200.0,
+    "description": "Venue deposit for all-hands offsite, event date June 18, 2026",
+    "true_label": "one_time_prepayment",
+    "true_coverage_start": "2026-06-18",
+    "true_coverage_end": "2026-06-18"
+  },
+  {
+    "id": "PP-006",
+    "vendor": "NetSuite (Oracle)",
+    "invoice_date": "2026-07-01",
+    "amount": 36000.0,
+    "description": "ERP platform subscription renewal, 12-month term August 2026 through July 2027",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-08-01",
+    "true_coverage_end": "2027-07-31"
+  },
+  {
+    "id": "OE-005",
+    "vendor": "Fresh Meadow Catering",
+    "invoice_date": "2026-06-03",
+    "amount": 5200.0,
+    "description": "Catering deposit for a series of quarterly team lunches through the remainder of the year",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "OE-007",
+    "vendor": "Verizon Wireless",
+    "invoice_date": "2026-07-01",
+    "amount": 480.0,
+    "description": "Monthly mobile plan charge for July 2026, current period only",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "PP-007",
+    "vendor": "Westfield Business Park LLC",
+    "invoice_date": "2026-01-02",
+    "amount": 5000.0,
+    "description": "Security deposit plus 2 months prepaid rent for suite 220, covering January and February 2026",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-01-01",
+    "true_coverage_end": "2026-02-28"
+  },
+  {
+    "id": "OE-002",
+    "vendor": "Delta Airlines",
+    "invoice_date": "2026-04-01",
+    "amount": 3400.0,
+    "description": "Advance purchase of airfare for sales team conference travel, multiple future flight dates April-June 2026",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "OE-006",
+    "vendor": "Amazon Business",
+    "invoice_date": "2026-02-18",
+    "amount": 890.0,
+    "description": "Annual Prime Business membership renewal",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "PP-011",
+    "vendor": "Harbor Legal Group",
+    "invoice_date": "2026-02-10",
+    "amount": 12000.0,
+    "description": "Retainer covering legal services for the February 2026 contract review engagement only",
+    "true_label": "one_time_prepayment",
+    "true_coverage_start": "2026-02-01",
+    "true_coverage_end": "2026-02-28"
+  },
+  {
+    "id": "PP-002",
+    "vendor": "Travelers Insurance Group",
+    "invoice_date": "2026-03-01",
+    "amount": 18600.0,
+    "description": "General liability insurance premium, policy term April 1, 2026 to March 31, 2027",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-04-01",
+    "true_coverage_end": "2027-03-31"
+  },
+  {
+    "id": "OE-001",
+    "vendor": "Office Depot",
+    "invoice_date": "2026-03-03",
+    "amount": 2800.0,
+    "description": "Bulk purchase of office supplies and printer toner for Q1-Q2 restocking",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "PP-003",
+    "vendor": "Crestline Property Management",
+    "invoice_date": "2026-06-10",
+    "amount": 9000.0,
+    "description": "Rent prepayment covering July, August, and September 2026 (3 months at $3,000/month)",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-07-01",
+    "true_coverage_end": "2026-09-30"
+  },
+  {
+    "id": "OE-008",
+    "vendor": "Bluebird Design Studio",
+    "invoice_date": "2026-04-22",
+    "amount": 7500.0,
+    "description": "50% deposit for logo and brand refresh project, work to be completed within 30 days",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "PP-008",
+    "vendor": "DataDog Inc.",
+    "invoice_date": "2026-05-12",
+    "amount": 9600.0,
+    "description": "Infrastructure monitoring - 6 month prepaid plan, June 1, 2026 through November 30, 2026",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-06-01",
+    "true_coverage_end": "2026-11-30"
+  },
+  {
+    "id": "PP-009",
+    "vendor": "Sterling Trade Show Productions",
+    "invoice_date": "2026-03-05",
+    "amount": 8000.0,
+    "description": "Booth and sponsorship fee for FinTech Summit 2026, event held April 22-24, 2026",
+    "true_label": "one_time_prepayment",
+    "true_coverage_start": "2026-04-22",
+    "true_coverage_end": "2026-04-24"
+  },
+  {
+    "id": "PP-001",
+    "vendor": "Salesforce Inc.",
+    "invoice_date": "2026-01-15",
+    "amount": 24000.0,
+    "description": "Annual subscription - Sales Cloud Enterprise, coverage period February 1, 2026 through January 31, 2027",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-02-01",
+    "true_coverage_end": "2027-01-31"
+  },
+  {
+    "id": "PP-004",
+    "vendor": "Adobe Inc.",
+    "invoice_date": "2026-02-20",
+    "amount": 6600.0,
+    "description": "Creative Cloud for Teams - annual license, term March 1, 2026 - February 28, 2027",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-03-01",
+    "true_coverage_end": "2027-02-28"
+  }
+]

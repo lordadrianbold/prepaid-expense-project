@@ -1,0 +1,24 @@
+# Secrets
+.env
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+
+# Private: real bills and anything derived from them
+actual_invoices/
+actual_photos/
+results/
+.llm_cache/
+
+# Large generated test files (regenerate with src/render_invoices.py)
+test_invoices/
+test_invoices_v2/
+test_invoices_v4/
+*.zip
+
+

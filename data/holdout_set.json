@@ -1,0 +1,102 @@
+[
+  {
+    "id": "HO-001",
+    "vendor": "Meridian Cyber Insurance Partners",
+    "invoice_date": "2026-08-01",
+    "amount": 21000.0,
+    "description": "Cyber liability insurance, policy period September 1, 2026 through August 31, 2027",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-09-01",
+    "true_coverage_end": "2027-08-31"
+  },
+  {
+    "id": "HO-002",
+    "vendor": "Zendesk Inc.",
+    "invoice_date": "2026-09-10",
+    "amount": 15600.0,
+    "description": "Customer support platform - annual subscription, coverage October 1, 2026 to September 30, 2027",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-10-01",
+    "true_coverage_end": "2027-09-30"
+  },
+  {
+    "id": "HO-003",
+    "vendor": "Coastal Business Park Holdings",
+    "invoice_date": "2026-07-20",
+    "amount": 7500.0,
+    "description": "Prepaid warehouse rent for August, September, and October 2026, $2,500/month",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-08-01",
+    "true_coverage_end": "2026-10-31"
+  },
+  {
+    "id": "HO-004",
+    "vendor": "Aegis Property & Casualty",
+    "invoice_date": "2026-05-28",
+    "amount": 26400.0,
+    "description": "Commercial umbrella insurance policy, 12-month term beginning July 1, 2026",
+    "true_label": "multi_period_prepayment",
+    "true_coverage_start": "2026-07-01",
+    "true_coverage_end": "2027-06-30"
+  },
+  {
+    "id": "HO-005",
+    "vendor": "Grandview Hotel & Conference Center",
+    "invoice_date": "2026-08-15",
+    "amount": 6300.0,
+    "description": "Deposit for annual sales kickoff event, dates September 9-11, 2026",
+    "true_label": "one_time_prepayment",
+    "true_coverage_start": "2026-09-09",
+    "true_coverage_end": "2026-09-11"
+  },
+  {
+    "id": "HO-006",
+    "vendor": "Whitfield & Associates Consulting",
+    "invoice_date": "2026-06-02",
+    "amount": 9800.0,
+    "description": "Retainer for a one-time compensation benchmarking study, scoped for June 2026 delivery only",
+    "true_label": "one_time_prepayment",
+    "true_coverage_start": "2026-06-01",
+    "true_coverage_end": "2026-06-30"
+  },
+  {
+    "id": "HO-007",
+    "vendor": "Staples Business Advantage",
+    "invoice_date": "2026-07-08",
+    "amount": 3100.0,
+    "description": "Bulk order of paper, ink cartridges, and binders, stock for the next two quarters",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "HO-008",
+    "vendor": "United Airlines",
+    "invoice_date": "2026-09-01",
+    "amount": 4600.0,
+    "description": "Advance booking of flights for multiple employees attending various conferences through year end",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "HO-009",
+    "vendor": "Riverside Print Shop",
+    "invoice_date": "2026-08-05",
+    "amount": 780.0,
+    "description": "Annual membership renewal - local print vendor loyalty program",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "HO-010",
+    "vendor": "Ironclad Legal Technologies",
+    "invoice_date": "2026-09-12",
+    "amount": 11000.0,
+    "description": "50% upfront deposit for a contract migration project, remainder due on completion within 45 days",
+    "true_label": "ordinary_expense"
+  },
+  {
+    "id": "HO-011",
+    "vendor": "Total Wine & More",
+    "invoice_date": "2026-06-20",
+    "amount": 1450.0,
+    "description": "Bulk purchase for company holiday party, event scheduled for December 2026",
+    "true_label": "ordinary_expense"
+  }
+]

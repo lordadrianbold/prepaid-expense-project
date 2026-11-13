@@ -1,0 +1,15 @@
+anthropic==2.8.0
+openpyxl>=3.1,<4
+pytest>=8
+reportlab>=4
+pymupdf>=1.24.3
+pillow>=10
+numpy>=1.26
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+python-dotenv>=1.0
+
+
+
+

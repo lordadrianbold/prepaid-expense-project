@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prepaid Expense Demo — Invoice to Schedule</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root { --paper:#F7F5F0; --paper-dark:#EDE9E0; --ink:#2B2B2B; --ink-soft:#6B6560; --stamp:#B5432D;
+          --stamp-dark:#8F3220; --line:#D9D3C7; --ok:#2F6B4F; --amber:#A8650F; --amber-bg:#FBF1DE; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; min-height:100vh;
+         display:flex; flex-direction:column; align-items:center; padding:48px 20px 80px; }
+  header { max-width:600px; text-align:center; margin-bottom:32px; }
+  h1 { font-size:28px; font-weight:600; margin:0 0 12px; letter-spacing:-0.01em; }
+  header p { color:var(--ink-soft); font-size:15px; line-height:1.6; margin:0; }
+  main { width:100%; max-width:760px; }
+  h2 { font-size:13px; font-weight:600; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-soft); margin:28px 0 10px; }
+  .samples { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; }
+  .sample { text-align:left; background:#fff; border:1px solid var(--line); border-radius:4px; padding:12px 14px; cursor:pointer; font:inherit; color:inherit; }
+  .sample:hover, .sample:focus-visible { border-color:var(--stamp); outline:none; }
+  .sample b { display:block; font-size:14px; margin-bottom:4px; }
+  .sample span { font-size:12.5px; color:var(--ink-soft); line-height:1.45; }
+  .upload { border:2px dashed var(--line); border-radius:4px; padding:26px; text-align:center; background:#fff; }
+  .upload p { margin:0 0 12px; font-size:14px; color:var(--ink-soft); }
+  .btn { background:var(--stamp); color:#fff; border:0; border-radius:4px; padding:10px 18px; font:inherit; font-weight:500; cursor:pointer; }
+  .btn:hover { background:var(--stamp-dark); } .btn:disabled { opacity:.5; cursor:default; }
+  .small { font-size:12.5px; color:var(--ink-soft); margin-top:10px; }
+  #status { margin-top:22px; font-size:14px; color:var(--ink-soft); min-height:20px; }
+  #status.err { color:var(--stamp-dark); }
+  .card { background:#fff; border:1px solid var(--line); border-radius:4px; padding:22px; margin-top:20px; }
+  .top { display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .badge { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:15px; padding:6px 12px; border-radius:3px; border:2px solid; letter-spacing:.04em; }
+  .AMORTIZE { color:var(--ok); border-color:var(--ok); } .EXPENSE { color:var(--ink); border-color:var(--ink); }
+  .REVIEW { color:var(--amber); border-color:var(--amber); background:var(--amber-bg); }
+  .vendor { font-size:18px; font-weight:600; } .meta { font-size:13.5px; color:var(--ink-soft); margin-top:4px; line-height:1.5; }
+  .tag { display:inline-block; font-size:11.5px; border:1px solid var(--line); border-radius:3px; padding:2px 7px; margin-left:6px; color:var(--ink-soft); vertical-align:middle; }
+  .review { background:var(--amber-bg); border:1px solid var(--amber); border-radius:4px; padding:14px 16px; margin-top:16px; }
+  .review b { color:var(--amber); display:block; margin-bottom:6px; }
+  .review ul { margin:6px 0 0 18px; padding:0; font-size:14px; line-height:1.5; }
+  .why { margin-top:16px; font-size:14px; line-height:1.6; }
+  table { width:100%; border-collapse:collapse; font-size:13px; margin-top:8px; }
+  th, td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+  th:first-child, td:first-child { text-align:left; } th { font-weight:600; color:var(--ink-soft); font-size:12px; }
+  td { font-family:'JetBrains Mono',monospace; } .scroll { overflow-x:auto; }
+  details { margin-top:14px; } summary { cursor:pointer; font-size:14px; font-weight:500; }
+  .entry { margin-top:10px; font-size:13px; } .entry .memo { font-weight:500; margin-bottom:2px; }
+  a.dl { display:inline-block; margin-top:16px; color:var(--stamp-dark); font-size:14px; }
+  footer { max-width:600px; margin-top:44px; color:var(--ink-soft); font-size:12.5px; line-height:1.6; text-align:center; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Prepaid Expense Identification</h1>
+  <p>Drop in a vendor bill. The tool decides if it is a prepayment or an ordinary expense, builds the monthly
+  schedule and journal entries, and sends anything it cannot vouch for to a person.</p>
+</header>
+<main>
+  <h2>Try a sample bill (free)</h2>
+  <div class="samples" id="samples"></div>
+
+  <h2>Or upload your own bill</h2>
+  <div class="upload">
+    <p>PDF, JPG or PNG, up to 8 MB. Reading your file uses the AI, so uploads are limited.</p>
+    <input type="file" id="file" accept=".pdf,.jpg,.jpeg,.png" style="display:none">
+    <button class="btn" id="pick">Choose a file</button>
+    <div class="small">Do not upload anything private. Test data only.</div>
+  </div>
+
+  <div id="status" role="status" aria-live="polite"></div>
+  <div id="out"></div>
+</main>
+<footer>Decision rules are plain, tested code. The AI only reads the bill and classifies it. Under $500 is always expensed.
+Blurry photos (under 1500 px) are always sent to review. Sample bills use saved answers, not a live AI call.</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money = n => (typeof n === 'number') ? n.toLocaleString('en-US',{style:'currency',currency:'USD'}) : '—';
+const LABEL = {ordinary_expense:'ordinary expense', one_time_prepayment:'one-time prepayment',
+               multi_period_prepayment:'multi-period prepayment', PARSE_ERROR:'could not be read'};
+
+async function getJSON(url, opts) {
+  const r = await fetch(url, opts);
+  let body = null; try { body = await r.json(); } catch(e) {}
+  if (!r.ok) throw new Error((body && body.detail) || 'Something went wrong (' + r.status + ').');
+  return body;
+}
+function status(msg, err) { const s = $('status'); s.textContent = msg || ''; s.className = err ? 'err' : ''; }
+
+function explain(r) {
+  if (r.decision === 'REVIEW') return 'Nothing is booked. A person needs to look at this bill first.';
+  if (r.decision === 'AMORTIZE') return 'Paid before the service is used, and over $500. It is booked to Prepaid Expenses and spread over the service period.';
+  if (r.ai_says !== 'ordinary_expense' && r.amount < 500)
+    return 'The AI called this a prepayment, but it is under $500, so a code rule expenses it right away.';
+  return 'This is an ordinary expense. It is booked as an expense now.';
+}
+
+function render(r) {
+  let h = '<div class="card"><div class="top"><div><div class="vendor">' + esc(r.vendor || 'Unknown vendor') +
+    (r.source === 'sample' ? '<span class="tag">sample</span>' : '') + '</div><div class="meta">' +
+    esc(r.file || '') + '<br>Invoice date ' + esc(r.invoice_date || '—') + ' &middot; Amount ' + money(r.amount) +
+    '<br>' + (r.source === 'sample' ? 'Saved answer: ' : 'AI read it as: ') + esc(LABEL[r.ai_says] || r.ai_says) +
+    (r.service_period ? ' &middot; service ' + esc(r.service_period.start) + ' to ' + esc(r.service_period.end) : '') +
+    '</div></div><div class="badge ' + r.decision + '">' + (r.decision === 'REVIEW' ? 'TO BE REVIEWED' : r.decision) + '</div></div>';
+  if (r.needs_review) {
+    h += '<div class="review"><b>To be reviewed by user</b>This bill was not booked. Please check it against the original:<ul>' +
+      r.review_reasons.map(x => '<li>' + esc(x.replace(/^To be reviewed by user:\s*/i, '')) + '</li>').join('') + '</ul></div>';
+  }
+  h += '<div class="why">' + esc(explain(r)) + '</div>';
+  if (r.notes && r.notes.length) h += '<div class="why">' + r.notes.map(esc).join('<br>') + '</div>';
+  if (r.reads_disagreed_on && r.reads_disagreed_on.length) h += '<div class="why">Repeated reads disagreed on: ' + r.reads_disagreed_on.map(esc).join(', ') + '.</div>';
+  if (r.schedule && r.schedule.length) {
+    h += '<details open><summary>Monthly schedule (' + r.schedule.length + (r.schedule.length === 1 ? ' month' : ' months') + ')</summary><div class="scroll"><table><tr><th>Month</th><th>Days</th><th>Expense</th><th>Cumulative</th><th>Remaining</th></tr>' +
+      r.schedule.map(s => '<tr><td>' + esc(s.period) + '</td><td>' + s.days + '</td><td>' + money(s.amount) + '</td><td>' + money(s.cumulative) + '</td><td>' + money(s.remaining) + '</td></tr>').join('') + '</table></div></details>';
+  }
+  if (r.entries && r.entries.length) {
+    h += '<details><summary>Journal entries (' + r.entries.length + ')</summary>' + r.entries.map(e =>
+      '<div class="entry"><div class="memo">' + esc(e.date) + ' &middot; ' + esc(e.memo) + '</div><div class="scroll"><table><tr><th>Account</th><th>Debit</th><th>Credit</th></tr>' +
+      e.lines.map(l => '<tr><td>' + esc(l.account_no) + ' ' + esc(l.account) + '</td><td>' + (l.debit ? money(l.debit) : '') + '</td><td>' + (l.credit ? money(l.credit) : '') + '</td></tr>').join('') + '</table></div></div>').join('') + '</details>';
+  }
+  if (r.worksheet_token) h += '<a class="dl" href="/worksheet/' + esc(r.worksheet_token) + '">Download the Excel worksheet</a>';
+  $('out').innerHTML = h + '</div>';
+}
+
+async function loadSamples() {
+  try {
+    const list = await getJSON('/samples');
+    $('samples').innerHTML = list.map(s => '<button class="sample" data-id="' + esc(s.id) + '"><b>' + esc(s.title) + '</b><span>' + esc(s.blurb) + '</span></button>').join('');
+    document.querySelectorAll('.sample').forEach(b => b.onclick = async () => {
+      status('Running sample…'); $('out').innerHTML = '';
+      try { render(await getJSON('/sample/' + b.dataset.id)); status(''); } catch (e) { status(e.message, true); }
+    });
+  } catch (e) { status(e.message, true); }
+}
+
+$('pick').onclick = () => $('file').click();
+$('file').onchange = async () => {
+  const f = $('file').files[0]; if (!f) return;
+  if (f.size > 8 * 1024 * 1024) { status('That file is over 8 MB.', true); return; }
+  $('pick').disabled = true; $('out').innerHTML = ''; status('Reading your bill… this takes a few seconds.');
+  const fd = new FormData(); fd.append('file', f);
+  try { render(await getJSON('/process', {method:'POST', body:fd})); status(''); }
+  catch (e) { status(e.message, true); }
+  finally { $('pick').disabled = false; $('file').value = ''; }
+};
+loadSamples();
+</script>
+</body>
+</html>
+
+
+
+

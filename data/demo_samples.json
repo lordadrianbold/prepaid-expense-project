@@ -1,0 +1,132 @@
+[
+ {
+  "id": "h4-006",
+  "title": "Annual insurance premium",
+  "blurb": "A 12-month policy billed up front. Becomes a prepayment spread over the year.",
+  "extracted": {
+   "id": "H4-006",
+   "source_file": "Annual insurance premium.pdf",
+   "vendor": "Caldwell Mutual Group",
+   "invoice_date": "2027-02-10",
+   "due_date": null,
+   "subtotal": null,
+   "tax": null,
+   "amount": 31800.0,
+   "description": "Commercial auto fleet policy, policy period March 1, 2027 through February 29, 2028",
+   "notes": null,
+   "runs": 1,
+   "image_long_side": null,
+   "fields_with_disagreement": []
+  },
+  "answer_key": {
+   "classification": "multi_period_prepayment",
+   "start": "2027-03-01",
+   "end": "2028-02-29"
+  }
+ },
+ {
+  "id": "h4-005",
+  "title": "Training bought in advance",
+  "blurb": "A one-time prepayment: paid now, used later.",
+  "extracted": {
+   "id": "H4-005",
+   "source_file": "Training bought in advance.pdf",
+   "vendor": "Brightwater Seminars",
+   "invoice_date": "2027-03-10",
+   "due_date": null,
+   "subtotal": null,
+   "tax": null,
+   "amount": 3600.0,
+   "description": "Project management bootcamp tuition for 3 staff, sessions May 17, 2027 through May 19, 2027",
+   "notes": null,
+   "runs": 1,
+   "image_long_side": null,
+   "fields_with_disagreement": []
+  },
+  "answer_key": {
+   "classification": "one_time_prepayment",
+   "start": "2027-05-17",
+   "end": "2027-05-19"
+  }
+ },
+ {
+  "id": "h4-011",
+  "title": "Small membership (under $500)",
+  "blurb": "The AI may call this a prepayment, but anything under $500 is expensed by a code rule.",
+  "extracted": {
+   "id": "H4-011",
+   "source_file": "Small membership (under $500).pdf",
+   "vendor": "Digital Trade Review",
+   "invoice_date": "2027-03-03",
+   "due_date": null,
+   "subtotal": null,
+   "tax": null,
+   "amount": 189.0,
+   "description": "Annual online subscription, period April 1, 2027 to March 31, 2028",
+   "notes": null,
+   "runs": 1,
+   "image_long_side": null,
+   "fields_with_disagreement": []
+  },
+  "answer_key": {
+   "classification": "multi_period_prepayment",
+   "start": "2027-04-01",
+   "end": "2028-03-31"
+  }
+ },
+ {
+  "id": "h4-001",
+  "title": "Repair invoice",
+  "blurb": "An ordinary expense. Work done, nothing prepaid.",
+  "extracted": {
+   "id": "H4-001",
+   "source_file": "Repair invoice.pdf",
+   "vendor": "Mason & Pike Electrical",
+   "invoice_date": "2027-07-13",
+   "due_date": null,
+   "subtotal": null,
+   "tax": null,
+   "amount": 1495.0,
+   "description": "Replacement of lighting fixtures in conference room",
+   "notes": null,
+   "runs": 1,
+   "image_long_side": null,
+   "fields_with_disagreement": []
+  },
+  "answer_key": {
+   "classification": "ordinary_expense",
+   "start": null,
+   "end": null
+  }
+ },
+ {
+  "id": "h4-004",
+  "title": "Blurry photo of a software license",
+  "blurb": "Same kind of bill, but the image is low quality (1,100 px). It always goes to a person.",
+  "extracted": {
+   "id": "H4-004",
+   "source_file": "Blurry photo of a software license.jpg",
+   "vendor": "Marlowe Tax Software",
+   "invoice_date": "2027-01-22",
+   "due_date": null,
+   "subtotal": null,
+   "tax": null,
+   "amount": 12900.0,
+   "description": "Tax preparation software license, license term February 15, 2027 through February 14, 2028",
+   "notes": null,
+   "runs": 1,
+   "image_long_side": 1100,
+   "fields_with_disagreement": []
+  },
+  "answer_key": {
+   "classification": "multi_period_prepayment",
+   "start": "2027-02-15",
+   "end": "2028-02-14"
+  }
+ }
+]
+
+
+
+
+

@@ -1,0 +1,16 @@
+.env
+.llm_cache/
+venv/
+__pycache__/
+*.pyc
+results/
+test_invoices*/
+tests/
+data/holdout*.json
+data/tuning*.json
+*.zip
+Notes.md
+CLAUDE.md
+
+
+

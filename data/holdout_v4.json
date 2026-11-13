@@ -1,0 +1,606 @@
+[
+  {
+    "id": "H4-001",
+    "vendor": "Mason & Pike Electrical",
+    "invoice_date": "2027-07-13",
+    "amount": 1495.0,
+    "description": "Replacement of lighting fixtures in conference room",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "repair"
+    ]
+  },
+  {
+    "id": "H4-002",
+    "vendor": "Granite State Equipment Repair",
+    "invoice_date": "2027-02-23",
+    "amount": 2380.0,
+    "description": "Calibration and repair of lab instruments, work completed February 2027",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "repair"
+    ]
+  },
+  {
+    "id": "H4-003",
+    "vendor": "Keystone Translation Partners",
+    "invoice_date": "2027-03-29",
+    "amount": 2750.0,
+    "description": "On-site translators for regulatory hearing on May 25, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "service_booking"
+    ],
+    "true_coverage_start": "2027-05-25",
+    "true_coverage_end": "2027-05-25"
+  },
+  {
+    "id": "H4-004",
+    "vendor": "Marlowe Tax Software",
+    "invoice_date": "2027-01-22",
+    "amount": 12900.0,
+    "description": "Tax preparation software license, license term February 15, 2027 through February 14, 2028",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "saas",
+      "mid_month_start",
+      "leap_year"
+    ],
+    "true_coverage_start": "2027-02-15",
+    "true_coverage_end": "2028-02-14"
+  },
+  {
+    "id": "H4-005",
+    "vendor": "Brightwater Seminars",
+    "invoice_date": "2027-03-10",
+    "amount": 3600.0,
+    "description": "Project management bootcamp tuition for 3 staff, sessions May 17, 2027 through May 19, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "training"
+    ],
+    "true_coverage_start": "2027-05-17",
+    "true_coverage_end": "2027-05-19"
+  },
+  {
+    "id": "H4-006",
+    "vendor": "Caldwell Mutual Group",
+    "invoice_date": "2027-02-10",
+    "amount": 31800.0,
+    "description": "Commercial auto fleet policy, policy period March 1, 2027 through February 29, 2028",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "insurance",
+      "leap_year"
+    ],
+    "true_coverage_start": "2027-03-01",
+    "true_coverage_end": "2028-02-29"
+  },
+  {
+    "id": "H4-007",
+    "vendor": "Copperline Studio Rentals",
+    "invoice_date": "2026-12-08",
+    "amount": 2400.0,
+    "description": "Studio space rental for product photoshoot on January 21, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "event_rental"
+    ],
+    "true_coverage_start": "2027-01-21",
+    "true_coverage_end": "2027-01-21"
+  },
+  {
+    "id": "H4-008",
+    "vendor": "Aspen Ridge Retreat Center",
+    "invoice_date": "2027-06-14",
+    "amount": 9600.0,
+    "description": "Retreat facility booking for leadership offsite, stay dates September 14, 2027 through September 16, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "lodging"
+    ],
+    "true_coverage_start": "2027-09-14",
+    "true_coverage_end": "2027-09-16"
+  },
+  {
+    "id": "H4-009",
+    "vendor": "Juniper Fleet Telematics",
+    "invoice_date": "2027-07-19",
+    "amount": 7800.0,
+    "description": "Vehicle tracking subscription, 12-month term beginning August 10, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "saas",
+      "duration_only",
+      "mid_month_start",
+      "leap_year"
+    ],
+    "true_coverage_start": "2027-08-10",
+    "true_coverage_end": "2028-08-09"
+  },
+  {
+    "id": "H4-010",
+    "vendor": "Ridgecrest Builders",
+    "invoice_date": "2027-03-15",
+    "amount": 42000.0,
+    "description": "Deposit (40%) for warehouse renovation, due on contract signing",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "project_deposit"
+    ]
+  },
+  {
+    "id": "H4-011",
+    "vendor": "Digital Trade Review",
+    "invoice_date": "2027-03-03",
+    "amount": 189.0,
+    "description": "Annual online subscription, period April 1, 2027 to March 31, 2028",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "small_membership"
+    ]
+  },
+  {
+    "id": "H4-012",
+    "vendor": "Summit Legal Videography",
+    "invoice_date": "2027-02-22",
+    "amount": 3250.0,
+    "description": "Videographer booking for deposition recording on April 6, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "service_booking"
+    ],
+    "true_coverage_start": "2027-04-06",
+    "true_coverage_end": "2027-04-06"
+  },
+  {
+    "id": "H4-013",
+    "vendor": "Waverly Data Backup",
+    "invoice_date": "2027-04-14",
+    "amount": 9360.0,
+    "description": "Cloud backup service, 18-month term commencing May 15, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "saas",
+      "duration_only",
+      "mid_month_start"
+    ],
+    "true_coverage_start": "2027-05-15",
+    "true_coverage_end": "2028-11-14"
+  },
+  {
+    "id": "H4-014",
+    "vendor": "Pinecrest Underwriters",
+    "invoice_date": "2026-12-02",
+    "amount": 48750.0,
+    "description": "Cyber liability policy, policy period January 1, 2027 through December 31, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "insurance"
+    ],
+    "true_coverage_start": "2027-01-01",
+    "true_coverage_end": "2027-12-31"
+  },
+  {
+    "id": "H4-015",
+    "vendor": "Brightpath Consulting",
+    "invoice_date": "2027-05-04",
+    "amount": 18500.0,
+    "description": "Milestone 2 payment for ERP implementation, system design phase",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "project_deposit"
+    ]
+  },
+  {
+    "id": "H4-016",
+    "vendor": "Lakeland Chamber of Commerce",
+    "invoice_date": "2027-01-04",
+    "amount": 275.0,
+    "description": "Annual membership dues, membership year 2027",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "small_membership"
+    ]
+  },
+  {
+    "id": "H4-017",
+    "vendor": "Silverline Training Supplies",
+    "invoice_date": "2027-01-28",
+    "amount": 3640.0,
+    "description": "Binders, workbooks and handouts for spring training sessions",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "goods_for_event"
+    ]
+  },
+  {
+    "id": "H4-018",
+    "vendor": "Stratus Fire Protection",
+    "invoice_date": "2027-08-04",
+    "amount": 6720.0,
+    "description": "Fire alarm monitoring, service period September 1, 2027 through August 31, 2028",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "services",
+      "leap_year"
+    ],
+    "true_coverage_start": "2027-09-01",
+    "true_coverage_end": "2028-08-31"
+  },
+  {
+    "id": "H4-019",
+    "vendor": "Silverton Realty Trust",
+    "invoice_date": "2027-05-20",
+    "amount": 36000.0,
+    "description": "Prepaid rent for warehouse unit 4, 6-month period starting June 1, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "rent",
+      "duration_only"
+    ],
+    "true_coverage_start": "2027-06-01",
+    "true_coverage_end": "2027-11-30"
+  },
+  {
+    "id": "H4-020",
+    "vendor": "Harlow Archive Storage",
+    "invoice_date": "2027-02-25",
+    "amount": 5400.0,
+    "description": "Document storage contract, 3-year term starting March 1, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "storage",
+      "duration_only",
+      "multi_year"
+    ],
+    "true_coverage_start": "2027-03-01",
+    "true_coverage_end": "2030-02-28"
+  },
+  {
+    "id": "H4-021",
+    "vendor": "Atlas Corporate Travel",
+    "invoice_date": "2027-04-08",
+    "amount": 3150.0,
+    "description": "Airfare for three trips: Denver in May, Chicago in July, Boston in October",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "noncontiguous_travel"
+    ]
+  },
+  {
+    "id": "H4-022",
+    "vendor": "Redwood Summit Lodge",
+    "invoice_date": "2027-02-03",
+    "amount": 13320.0,
+    "description": "Lodging for 18 guests, nights of April 12, 2027 through April 15, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "lodging"
+    ],
+    "true_coverage_start": "2027-04-12",
+    "true_coverage_end": "2027-04-15"
+  },
+  {
+    "id": "H4-023",
+    "vendor": "Westbrook Industrial Supply",
+    "invoice_date": "2027-06-23",
+    "amount": 2710.0,
+    "description": "Annual supply of safety gloves, goggles and respirator filters, delivered in two shipments",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "bulk_supplies"
+    ]
+  },
+  {
+    "id": "H4-024",
+    "vendor": "Tidewater Expo Group",
+    "invoice_date": "2027-01-27",
+    "amount": 16800.0,
+    "description": "Exhibit space at Midwest Logistics Show, show dates April 27, 2027 to April 29, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "trade_show"
+    ],
+    "true_coverage_start": "2027-04-27",
+    "true_coverage_end": "2027-04-29"
+  },
+  {
+    "id": "H4-025",
+    "vendor": "Ashford Pest Control",
+    "invoice_date": "2027-05-27",
+    "amount": 3960.0,
+    "description": "Pest control service agreement, term March 15, 2027 through March 14, 2028",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "services",
+      "partly_elapsed",
+      "leap_year"
+    ],
+    "true_coverage_start": "2027-03-15",
+    "true_coverage_end": "2028-03-14"
+  },
+  {
+    "id": "H4-026",
+    "vendor": "Lantern Security Monitoring",
+    "invoice_date": "2027-03-08",
+    "amount": 8400.0,
+    "description": "Alarm monitoring, service period January 1, 2027 through June 30, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "services",
+      "partly_elapsed"
+    ],
+    "true_coverage_start": "2027-01-01",
+    "true_coverage_end": "2027-06-30"
+  },
+  {
+    "id": "H4-027",
+    "vendor": "Lakeshore Yacht Charters",
+    "invoice_date": "2027-05-03",
+    "amount": 11750.0,
+    "description": "Yacht charter for executive retreat on July 16, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "event_rental"
+    ],
+    "true_coverage_start": "2027-07-16",
+    "true_coverage_end": "2027-07-16"
+  },
+  {
+    "id": "H4-028",
+    "vendor": "Alpine Rigging & Staging",
+    "invoice_date": "2027-04-05",
+    "amount": 5900.0,
+    "description": "Stage and lighting rig rental, rental period June 9, 2027 to June 13, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "equipment_rental"
+    ],
+    "true_coverage_start": "2027-06-09",
+    "true_coverage_end": "2027-06-13"
+  },
+  {
+    "id": "H4-029",
+    "vendor": "Crossroads Event Gifts",
+    "invoice_date": "2027-09-06",
+    "amount": 2140.0,
+    "description": "Award plaques and engraved gifts for annual recognition dinner in November",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "goods_for_event"
+    ]
+  },
+  {
+    "id": "H4-030",
+    "vendor": "Sunrise Uniforms",
+    "invoice_date": "2027-04-26",
+    "amount": 3290.0,
+    "description": "Employee uniforms and name badges for new store opening in August",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "goods_for_event"
+    ]
+  },
+  {
+    "id": "H4-031",
+    "vendor": "Fairmont Office Furnishings",
+    "invoice_date": "2027-01-18",
+    "amount": 8920.0,
+    "description": "Ergonomic chairs and standing desks for new hires",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "goods"
+    ]
+  },
+  {
+    "id": "H4-032",
+    "vendor": "Delmar Compliance Training",
+    "invoice_date": "2027-04-12",
+    "amount": 15600.0,
+    "description": "Annual compliance training library, service period January 1, 2027 through December 31, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "saas",
+      "partly_elapsed"
+    ],
+    "true_coverage_start": "2027-01-01",
+    "true_coverage_end": "2027-12-31"
+  },
+  {
+    "id": "H4-033",
+    "vendor": "Regional Bookkeepers Association",
+    "invoice_date": "2027-02-02",
+    "amount": 395.0,
+    "description": "Annual membership renewal, membership period March 1, 2027 through February 29, 2028",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "small_membership"
+    ]
+  },
+  {
+    "id": "H4-034",
+    "vendor": "Harborview Convention Hall",
+    "invoice_date": "2027-01-12",
+    "amount": 8450.0,
+    "description": "Ballroom rental for sales conference on March 4, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "event_rental"
+    ],
+    "true_coverage_start": "2027-03-04",
+    "true_coverage_end": "2027-03-04"
+  },
+  {
+    "id": "H4-035",
+    "vendor": "Northgate Facilities Care",
+    "invoice_date": "2027-01-05",
+    "amount": 14400.0,
+    "description": "Janitorial services contract, service period February 1, 2027 through July 31, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "services"
+    ],
+    "true_coverage_start": "2027-02-01",
+    "true_coverage_end": "2027-07-31"
+  },
+  {
+    "id": "H4-036",
+    "vendor": "Hollis Auto Care",
+    "invoice_date": "2027-02-14",
+    "amount": 1865.4,
+    "description": "Brake replacement and engine diagnostics, fleet vehicle 14",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "repair"
+    ]
+  },
+  {
+    "id": "H4-037",
+    "vendor": "Cascade Software Support",
+    "invoice_date": "2027-06-08",
+    "amount": 7350.0,
+    "description": "Hourly technical support for the period April 1, 2027 through May 31, 2027, billed in arrears",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "arrears"
+    ]
+  },
+  {
+    "id": "H4-038",
+    "vendor": "Beacon Hill Workshops",
+    "invoice_date": "2027-08-17",
+    "amount": 6250.0,
+    "description": "Safety instructor workshop fee, workshop dates October 4, 2027 through October 7, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "training"
+    ],
+    "true_coverage_start": "2027-10-04",
+    "true_coverage_end": "2027-10-07"
+  },
+  {
+    "id": "H4-039",
+    "vendor": "Clearwater Janitorial",
+    "invoice_date": "2027-04-01",
+    "amount": 5400.0,
+    "description": "Cleaning services for the period January 1, 2027 through March 31, 2027",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "arrears"
+    ]
+  },
+  {
+    "id": "H4-040",
+    "vendor": "Peakview Marketing Agency",
+    "invoice_date": "2027-03-24",
+    "amount": 9000.0,
+    "description": "Retainer, creative campaign project deposit due on kickoff",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "project_deposit"
+    ]
+  },
+  {
+    "id": "H4-041",
+    "vendor": "Ironwood Software Licensing",
+    "invoice_date": "2027-03-18",
+    "amount": 24000.0,
+    "description": "Enterprise analytics subscription, 24-month term beginning April 1, 2027",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "saas",
+      "duration_only",
+      "multi_year"
+    ],
+    "true_coverage_start": "2027-04-01",
+    "true_coverage_end": "2029-03-31"
+  },
+  {
+    "id": "H4-042",
+    "vendor": "Sterling Print & Promo",
+    "invoice_date": "2027-05-11",
+    "amount": 4380.0,
+    "description": "Branded jackets and tote bags for client appreciation event in June",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "goods_for_event"
+    ]
+  },
+  {
+    "id": "H4-043",
+    "vendor": "Cardinal Elevator Maintenance",
+    "invoice_date": "2027-06-02",
+    "amount": 18600.0,
+    "description": "Elevator maintenance agreement, coverage July 1, 2027 to June 30, 2029",
+    "true_label": "multi_period_prepayment",
+    "tags": [
+      "maintenance",
+      "multi_year"
+    ],
+    "true_coverage_start": "2027-07-01",
+    "true_coverage_end": "2029-06-30"
+  },
+  {
+    "id": "H4-044",
+    "vendor": "Redline Courier Services",
+    "invoice_date": "2027-08-10",
+    "amount": 960.0,
+    "description": "Courier and delivery charges for July 2027",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "arrears"
+    ]
+  },
+  {
+    "id": "H4-045",
+    "vendor": "Evergreen Copy Center",
+    "invoice_date": "2027-06-30",
+    "amount": 1260.0,
+    "description": "Printing of marketing brochures and catalogs",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "goods"
+    ]
+  },
+  {
+    "id": "H4-046",
+    "vendor": "Trailhead Travel Management",
+    "invoice_date": "2027-05-17",
+    "amount": 5780.0,
+    "description": "Hotel and flights for sales team visits to Seattle in June, Austin in August and Miami in November",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "noncontiguous_travel"
+    ]
+  },
+  {
+    "id": "H4-047",
+    "vendor": "Greenfield Packaging Supply",
+    "invoice_date": "2027-02-09",
+    "amount": 6480.0,
+    "description": "Six-month supply of shipping cartons, tape and labels",
+    "true_label": "ordinary_expense",
+    "tags": [
+      "bulk_supplies"
+    ]
+  },
+  {
+    "id": "H4-048",
+    "vendor": "Pacific Crest Tent & Event",
+    "invoice_date": "2027-07-08",
+    "amount": 4180.0,
+    "description": "Tent and seating rental for customer picnic on August 21, 2027",
+    "true_label": "one_time_prepayment",
+    "tags": [
+      "event_rental"
+    ],
+    "true_coverage_start": "2027-08-21",
+    "true_coverage_end": "2027-08-21"
+  }
+]
+
+
+
+
+
